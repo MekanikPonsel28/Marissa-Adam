@@ -174,16 +174,16 @@ lightbox.addEventListener("click",(e)=>{
 
 });
 // ==========================
-// Nama Tamu dari URL
+// Nama Tamu
 // ==========================
+document.addEventListener("DOMContentLoaded", function () {
 
-const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
 
-const guest = params.get("to");
+    const guest = params.get("to");
 
-if (guest) {
+    if (guest) {
+        document.getElementById("guestName").textContent = decodeURIComponent(guest);
+    }
 
-    document.getElementById("guestName").textContent =
-        decodeURIComponent(guest);
-
-}
+});
