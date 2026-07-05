@@ -138,52 +138,18 @@ function startFlowers() {
     flowerInterval = setInterval(createFlower, 1500);
 }
 // ==========================
-// LIGHTBOX
-// ==========================
-
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-const galleryImages = document.querySelectorAll(".gallery-feature img, .gallery-grid img");
-
-galleryImages.forEach(img => {
-
-    img.addEventListener("click", function(){
-
-        lightbox.style.display = "flex";
-
-        lightboxImg.src = this.src;
-
-    });
- 
-
-});
-
-document.querySelector(".close").addEventListener("click",()=>{
-
-    lightbox.style.display="none";
-
-});
-
-lightbox.addEventListener("click",(e)=>{
-
-    if(e.target===lightbox){
-
-        lightbox.style.display="none";
-
-    }
-
-});
-// ==========================
 // Nama Tamu
 // ==========================
 document.addEventListener("DOMContentLoaded", function () {
 
+    const guestName = document.getElementById("guestName");
     const params = new URLSearchParams(window.location.search);
-
     const guest = params.get("to");
 
-    if (guest) {
-        document.getElementById("guestName").textContent = decodeURIComponent(guest);
+    if (guest && guest.trim() !== "") {
+        guestName.textContent = decodeURIComponent(guest);
+    } else {
+        guestName.textContent = "Bapak/Ibu/Saudara/i";
     }
 
 });
