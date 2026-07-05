@@ -137,9 +137,6 @@ let flowerInterval;
 function startFlowers() {
     flowerInterval = setInterval(createFlower, 1500);
 }
-// ==========================
-// Nama Tamu
-// ==========================
 document.addEventListener("DOMContentLoaded", function () {
 
     const guestName = document.getElementById("guestName");
