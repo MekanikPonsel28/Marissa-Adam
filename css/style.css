@@ -1814,8 +1814,25 @@ LOCATION
 }
 
 #guestName{
-    font-size:24px;
+    font-size:20px;
     color:#4f5f4d;
     margin-top:10px;
     font-weight:600;
+}
+/* ==========================
+   RESPONSIVE HP
+========================== */
+
+@media (max-width:768px){
+
+    .card h1{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    .cover-photo-frame{
+        width:170px;
+        height:220px;
+    }
+
 }
